@@ -1,0 +1,73 @@
+from pathlib import Path
+
+html_content = """<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Barber Shop - Tavo Kirpykla</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 0; background:#111; color:#fff; }
+    header { background:#000; padding:40px; text-align:center; }
+    header h1 { margin:0; font-size:40px; }
+    nav { background:#222; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; }
+    section { padding:40px; max-width:900px; margin:auto; }
+    .btn { background:#c59d5f; padding:10px 20px; color:#000; text-decoration:none; display:inline-block; margin-top:10px; }
+    footer { background:#000; text-align:center; padding:20px; font-size:14px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tavo Kirpykla 💈</h1>
+  <p>Stilius, kokybė ir profesionalumas</p>
+</header>
+
+<nav>
+  <a href="#apie">Apie mus</a>
+  <a href="#paslaugos">Paslaugos</a>
+  <a href="#kontaktai">Kontaktai</a>
+</nav>
+
+<section id="apie">
+  <h2>Apie mus</h2>
+  <p>
+    Sveiki atvykę į mūsų kirpyklą! Mes esame profesionali barber shop komanda, 
+    kuri rūpinasi jūsų stiliumi ir išvaizda. Mūsų tikslas – suteikti aukščiausios kokybės 
+    plaukų kirpimo ir barzdos formavimo paslaugas.
+  </p>
+</section>
+
+<section id="paslaugos">
+  <h2>Paslaugos</h2>
+  <ul>
+    <li>Vyriškas kirpimas</li>
+    <li>Barzdos modeliavimas</li>
+    <li>Skutimas karštu rankšluosčiu</li>
+    <li>Plaukų dažymas</li>
+    <li>Stiliaus konsultacija</li>
+  </ul>
+</section>
+
+<section id="kontaktai">
+  <h2>Kontaktai</h2>
+  <p>📍 Adresas: [įrašyk savo adresą]</p>
+  <p>📞 Telefonas: [tavo numeris]</p>
+  <p>📧 El. paštas: [tavo email]</p>
+
+  <a class="btn" href="#">Rezervuoti laiką</a>
+</section>
+
+<footer>
+  © 2026 Tavo Kirpykla. Visos teisės saugomos.
+</footer>
+
+</body>
+</html>
+"""
+
+file_path = Path("/mnt/data/kirpykla.html")
+file_path.write_text(html_content, encoding="utf-8")
+
+file_path.name
